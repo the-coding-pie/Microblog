@@ -1,0 +1,63 @@
+main {
+    min-height: 90vh;
+}
+
+.navbar {
+    background: #1DA1F2 !important;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  
+}
+
+.post__left {
+    margin-right: 1rem;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    max-height: 40px;
+    max-width: 40px;
+    border-radius: 5rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+.post__right {
+    flex: 5 5;
+}
+
+.post__right .top {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem;
+}
+
+.btn-blue {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.btn-blue:hover {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+footer {
+    background: #1DA1F2;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{% block content %}
+    <div>
+        {% if posts %}
+            <div class="posts">
+                {% for post in posts %}
+                    <div class="post border">
+                        <div class="post__left">
+                            <img src="{{ url_for('static', filename=post.profile_pic) }}" alt="{{ post.author }}" class="profile-pic">
+                        </div>
+                        <div class="post__right">
+                            <div class="top text-muted">
+                                <a class="username">{{ post.author }}</a>
+                                <span class="extras"> on </span>
+                                <span class="date-posted">{{ post.date_posted }}</span>
+                            </div>
+                            <div class="bottom">
+                                {{ post.body }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No Posts Found!</p>
+        {% endif %}
+    </div>
+{% endblock %}
