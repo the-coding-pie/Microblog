@@ -8,7 +8,6 @@ env*
 venv/
 venv/*
 migrations/
-migrations/*
 dist/
 build/
 *.egg
@@ -20,6 +19,7 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+__pycache__
 
 # Coverage reports
 htmlcov/
