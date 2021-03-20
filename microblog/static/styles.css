@@ -2,8 +2,17 @@ main {
     min-height: 90vh;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0rem !important;
+}
+
 .navbar {
     background: #1DA1F2 !important;
+}
+
+.invalid-feedback {
+    display: block;
 }
 
 .posts {

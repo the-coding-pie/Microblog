@@ -1,6 +1,7 @@
 from microblog.blog import blog
 from flask import render_template
 from microblog.blog.forms import PostForm
+from flask_login import login_required
 
 posts = [
     {
@@ -27,10 +28,12 @@ posts = [
 ]
 
 @blog.route('/')
+@login_required
 def index():
-    return render_template('blog/index.html', posts=posts)
+    return render_template('blog/index.html', posts=posts, title='Home')
 
 @blog.route('/new')
+@login_required
 def post():
     form = PostForm()
-    return render_template('blog/create_post.html', form=form)
+    return render_template('blog/create_post.html', form=form, title='Create Post')
