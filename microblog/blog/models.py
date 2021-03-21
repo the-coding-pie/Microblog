@@ -11,7 +11,7 @@ class Post(db.Model):
         return self.body[:20]
 
     def stripped_body(self):
-        if len(self.body) > 30:
-            return self.body[:30] + "..."
+        if len(self.body) > 140:
+            return self.body[:140] + "..."
         else:
             return self.body
