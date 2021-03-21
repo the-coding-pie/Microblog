@@ -24,14 +24,14 @@ A simple microblog built using Flask. Made to refresh my Flask knowledge ;)
 
 - Click on `Code` > `Download Zip`
 - Unzip it
-- `cd` to the root folder (`/Microblog-main/`)
+- `cd` to the root folder (ie, `cd` to `Microblog-main/`)
 - `python3 -m venv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
-- export FLASK_APP='manage.py'
-- flask db init
-- flask db migrate
-- flask db upgrade
+- `export FLASK_APP='manage.py'`
+- `flask db init`
+- `flask db migrate`
+- `flask db upgrade`
 - Finally, `python manage.py`
 - Visit http://localhost:8000 in your browser and `Register` an account an create `New Post`!
 
