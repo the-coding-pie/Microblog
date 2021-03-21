@@ -1,29 +1,39 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <div>
-        {% if posts %}
-            <div class="posts">
-                {% for post in posts %}
-                    <div class="post border">
-                        <div class="post__left">
-                            <img src="{{ url_for('static', filename=post.profile_pic) }}" alt="{{ post.author }}" class="profile-pic">
-                        </div>
-                        <div class="post__right">
-                            <div class="top text-muted">
-                                <a class="username">{{ post.author }}</a>
-                                <span class="extras"> on </span>
-                                <span class="date-posted">{{ post.date_posted }}</span>
-                            </div>
-                            <div class="bottom">
-                                {{ post.body }}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <p>No Posts Found!</p>
-        {% endif %}
-    </div>
+{% extends "base.html" %} {% block content %}
+<div>
+  {% if posts %}
+  <div class="posts">
+    {% for post in posts %}
+    <article class="card border">
+      <div class="post">
+        <div class="post__left">
+          <img
+            src="{{ url_for('static', filename=post.author.profile_pic) }}"
+            alt="{{ post.author }}"
+            class="profile-pic"
+          />
+        </div>
+        <div class="post__right">
+          <div class="top text-muted">
+            <a href="#" class="username">{{ post.author }}</a>
+            <span> on </span>
+            <span class="date-posted"
+              >{{ post.date_posted.strftime('%d %b, %Y') }}</span
+            >
+          </div>
+          <div class="bottom mb-2">
+            {{ post.stripped_body() }}
+          </div>
+         <div class="read-more">
+            <a href="{{ url_for('blog.post_detail', post_id=post.id)}}"
+            >Read More...</a
+         </div>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No Posts Found!</p>
+  {% endif %}
+</div>
 {% endblock %}
