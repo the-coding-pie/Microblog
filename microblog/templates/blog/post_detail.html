@@ -4,11 +4,11 @@
     <header class="extras mb-3">
       <div class="left text-muted">
         <img
-          src="{{ url_for('static', filename=post.author.profile_pic) }}"
+          src="{{ url_for('static', filename='profile_pics/' + post.author.profile_pic) }}"
           alt="{{ post.author }}"
           class="profile-pic mr-2"
         />
-        <a href="#" class="username">{{ post.author }}</a>
+        <a href="{{ url_for('auth.user_posts', username=post.author.username) }}" class="username">{{ post.author }}</a>
         <span> on </span>
         <span class="date-posted"
           >{{ post.date_posted.strftime('%d %b, %Y') }}</span
