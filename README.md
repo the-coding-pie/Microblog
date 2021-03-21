@@ -2,7 +2,7 @@
 
 A simple microblog built using Flask. Made to refresh my Flask knowledge ;)
 
-<img src="https://i.ibb.co/HH42FpT/rsz-screenshot-from-2021-03-21-13-12-10.png" width="50%"/>
+<img src="https://i.ibb.co/HH42FpT/rsz-screenshot-from-2021-03-21-13-12-10.png" width="90%"/>
 
 ## Technologies Used:
 
