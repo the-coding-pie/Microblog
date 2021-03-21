@@ -20,6 +20,8 @@ _mailinglist
 docs/_build/
 .vscode
 
+*.db
+
 # Coverage reports
 htmlcov/
 .coverage
