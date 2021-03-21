@@ -23,8 +23,8 @@ A simple microblog built using Flask. Made to refresh my Flask knowledge ;)
 ## How to use it
 
 - Click on `Code` > `Download ZIP`
-- Unzip it
-- `cd` to the root folder (ie, `cd` to `Microblog-main/`)
+- Unzip it and open Terminal (I am using `bash`)
+- `cd` to the root folder (ie, `cd` to `Microblog-main/` from where you are standing.)
 - `python3 -m venv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
