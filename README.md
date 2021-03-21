@@ -22,7 +22,7 @@ A simple microblog built using Flask. Made to refresh my Flask knowledge ;)
 
 ## How to use it
 
-- Click on `Code` > `Download Zip`
+- Click on `Code` > `Download ZIP`
 - Unzip it
 - `cd` to the root folder (ie, `cd` to `Microblog-main/`)
 - `python3 -m venv venv`
